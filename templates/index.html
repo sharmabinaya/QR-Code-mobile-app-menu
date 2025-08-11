@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="min-h-screen p-6 flex items-center justify-center">
+    <div class="w-full max-w-md mx-auto">
+        <div class="neumorphic p-8 mb-8 text-center">
+            <div class="neumorphic-button p-6 inline-flex mb-6">
+                <i class="fas fa-utensils text-4xl text-accent"></i>
+            </div>
+            
+            <h1 class="text-3xl font-bold text-accent mb-4">
+                Welcome to MenuFlow
+            </h1>
+            
+            <p class="text-secondary mb-8 leading-relaxed">
+                Experience seamless digital ordering. Scan QR codes, browse menus, and place orders instantly.
+            </p>
+
+            <div class="space-y-4">
+                <a href__="/qr-scanner" class="neumorphic-button w-full p-4 flex items-center justify-center gap-3 font-semibold text-accent">
+                    <i class="fas fa-qrcode"></i>
+                    Start Scanning
+                </a>
+
+                <a href__="/menu?table=demo_table" class="neumorphic-button w-full p-4 flex items-center justify-center gap-3 font-medium text-primary">
+                    <i class="fas fa-utensils"></i>
+                    Browse Demo Menu
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="neumorphic p-6 text-center">
+            <h3 class="font-semibold text-accent mb-3">How it works</h3>
+            <div class="space-y-3 text-sm text-secondary leading-relaxed">
+                <p>1. Scan the QR code at your table</p>
+                <p>2. Browse the digital menu</p>
+                <p>3. Place your order instantly</p>
+                <p>4. Track your order status</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

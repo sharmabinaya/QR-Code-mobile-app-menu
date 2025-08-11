@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="min-h-screen p-6 flex items-center justify-center">
+    <div class="w-full max-w-md mx-auto">
+        <div class="neumorphic p-8 mb-8 text-center">
+            <div class="neumorphic-button p-6 inline-flex mb-6">
+                <i class="fas fa-qrcode text-4xl text-accent"></i>
+            </div>
+            
+            <h1 class="text-3xl font-bold text-accent mb-4">
+                Scan QR Code
+            </h1>
+            
+            <p class="text-secondary mb-8 leading-relaxed">
+                Point your camera at the QR code on your table to view the menu and start ordering
+            </p>
+
+            <div id="scanner-container">
+                <div id="camera-section" style="display: none;">
+                    <div class="neumorphic-inset rounded-2xl overflow-hidden aspect-square relative mb-4">
+                        <video id="camera-feed" autoplay playsinline muted class="w-full h-full object-cover"></video>
+                        
+                        <div class="absolute inset-4 border-2 border-accent border-dashed rounded-xl flex items-center justify-center pointer-events-none">
+                            <div class="text-center">
+                                <i class="fas fa-qrcode text-4xl text-accent opacity-50 mb-2"></i>
+                                <p class="text-accent text-sm font-medium">
+                                    Position QR code here
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="camera-error" class="neumorphic-inset p-4 text-center mb-4" style="display: none;">
+                        <p class="text-red-600 text-sm"></p>
+                    </div>
+
+                    <button id="close-camera" class="neumorphic-button w-full p-3 font-medium text-primary">
+                        Close Camera
+                    </button>
+
+                    <button id="simulate-scan" class="neumorphic-button w-full p-3 font-medium text-accent opacity-75 mt-2">
+                        Simulate QR Detection (Demo)
+                    </button>
+                </div>
+
+                <div id="start-section">
+                    <div class="space-y-4">
+                        <button id="start-camera" class="neumorphic-button w-full p-4 flex items-center justify-center gap-3 font-semibold text-accent">
+                            <i class="fas fa-camera"></i>
+                            <span id="camera-text">Open Camera</span>
+                        </button>
+
+                        <div class="flex items-center gap-4 my-6">
+                            <div class="flex-1 h-px bg-gradient-to-r from-transparent to-gray-300"></div>
+                            <span class="text-secondary text-sm">or</span>
+                            <div class="flex-1 h-px bg-gradient-to-l from-transparent to-gray-300"></div>
+                        </div>
+
+                        <a href__="/menu?table=demo_table" class="neumorphic-button w-full p-4 flex items-center justify-center gap-3 font-medium text-primary">
+                            <i class="fas fa-mobile-alt"></i>
+                            Try Demo Menu
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="neumorphic p-6 text-center">
+            <h3 class="font-semibold text-accent mb-3">How it works</h3>
+            <div class="space-y-3 text-sm text-secondary leading-relaxed">
+                <p>1. Scan the QR code at your table</p>
+                <p>2. Browse the digital menu</p>
+                <p>3. Place your order instantly</p>
+                <p>4. Track your order status</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/qr-scanner.js') }}"></script>
+{% endblock %}

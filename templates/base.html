@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MenuFlow - Digital Ordering</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <div class="mobile-nav md:hidden fixed bottom-4 left-4 right-4 z-50">
+            <nav class="neumorphic-nav px-6 py-4">
+                <div class="flex justify-around items-center">
+                    <a href="/qr-scanner" class="nav-link p-3 rounded-full">
+                        <i class="fas fa-qrcode"></i>
+                    </a>
+                    <a href="/menu" class="nav-link p-3 rounded-full">
+                        <i class="fas fa-utensils"></i>
+                    </a>
+                    <a href="/orders" class="nav-link p-3 rounded-full">
+                        <i class="fas fa-shopping-bag"></i>
+                    </a>
+                    <a href="/dashboard" class="nav-link p-3 rounded-full">
+                        <i class="fas fa-chart-bar"></i>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="desktop-nav hidden md:flex">
+            <div class="w-72 min-h-screen p-6">
+                <div class="neumorphic p-8 h-full">
+                    <div class="flex items-center gap-3 mb-12">
+                        <div class="neumorphic-button p-3">
+                            <i class="fas fa-utensils text-accent"></i>
+                        </div>
+                        <div>
+                            <h1 class="text-2xl font-bold text-accent">MenuFlow</h1>
+                            <p class="text-sm text-secondary">Digital Ordering</p>
+                        </div>
+                    </div>
+
+                    <nav class="space-y-4">
+                        <a href="/qr-scanner" class="nav-link flex items-center gap-4 p-4 rounded-2xl">
+                            <i class="fas fa-qrcode"></i>
+                            <span class="font-medium">QR Scanner</span>
+                        </a>
+                        <a href="/menu" class="nav-link flex items-center gap-4 p-4 rounded-2xl">
+                            <i class="fas fa-utensils"></i>
+                            <span class="font-medium">Menu</span>
+                        </a>
+                        <a href="/orders" class="nav-link flex items-center gap-4 p-4 rounded-2xl">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="font-medium">My Orders</span>
+                        </a>
+                        <a href="/dashboard" class="nav-link flex items-center gap-4 p-4 rounded-2xl">
+                            <i class="fas fa-chart-bar"></i>
+                            <span class="font-medium">Owner Dashboard</span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="flex-1">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+
+        </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

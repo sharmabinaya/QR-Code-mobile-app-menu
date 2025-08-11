@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="min-h-screen p-4 pb-32">
+    <!-- Loading State -->
+    <div id="loading" class="min-h-screen p-6 flex items-center justify-center">
+        <div class="neumorphic p-8 text-center">
+            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-accent mx-auto mb-4"></div>
+            <p class="text-secondary">Loading menu...</p>
+        </div>
+    </div>
+
+    <!-- Menu Content -->
+    <div id="menu-content" style="display: none;">
+        <!-- Restaurant Header -->
+        <div class="neumorphic p-6 mb-6 text-center">
+            <h1 id="restaurant-name" class="text-2xl md:text-3xl font-bold text-accent mb-2">
+                Demo Restaurant
+            </h1>
+            <p class="text-secondary flex items-center justify-center gap-2">
+                <span id="cuisine-type">International Cuisine</span>
+                <span>•</span>
+                <span class="font-medium">Table <span id="table-display">{{ table_id }}</span></span>
+            </p>
+        </div>
+
+        <!-- Category Filter -->
+        <div class="neumorphic p-4 mb-6">
+            <div class="flex gap-2 overflow-x-auto pb-2" id="category-filters">
+                <!-- Categories will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Menu Items -->
+        <div id="menu-items" class="space-y-4 mb-6">
+            <!-- Menu items will be populated by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Cart Summary -->
+    <div id="cart-summary" class="fixed bottom-20 md:bottom-6 left-4 right-4 z-40" style="display: none;">
+        <!-- Cart summary will be populated by JavaScript -->
+    </div>
+
+    <!-- Item Modal -->
+    <div id="item-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 items-center justify-center p-4" style="display: none;">
+        <div class="neumorphic w-full max-w-lg max-h-[90vh] overflow-y-auto">
+            <!-- Modal content will be populated by JavaScript -->
+        </div>
+    </div>
+</div>
+
+<script>
+    window.tableId = "{{ table_id }}";
+</script>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/menu.js') }}"></script>
+{% endblock %}
