@@ -8,27 +8,28 @@ MenuFlow is a modern, mobile-first web application designed to revolutionize the
 
 
 MenuFlow: Digital QR Code Menu & Ordering System
-MenuFlow is a modern, mobile-first web application that allows restaurants to create and manage digital menus accessible via QR codes. It provides a seamless and contactless ordering experience for customers, replacing traditional physical menus.
+
+MenuFlow is a modern, mobile-first web application that allows small business owners (Cafe, Restaurant, any Local business with the fast growing technology to create and manage digital menus accessible via QR codes. It provides a seamless and contactless ordering experience for customers, replacing traditional physical menus.
 
 The application is built to be intuitive for both restaurant owners, who can easily manage their menu and orders, and customers, who can quickly browse and order from their mobile devices.
 
 ✨ Features
-QR Code Integration: Generate and display a unique QR code for each table, allowing customers to instantly access the menu on their smartphones.
+1. QR Code Integration: Generate and display a unique QR code for each table, allowing customers to instantly access the menu on their smartphones.
 
-Mobile-First Design: A fully responsive interface that looks and works great on any device, from smartphones to desktops.
+2. Mobile-First Design: A fully responsive interface that looks and works great on any device, from smartphones to desktops.
 
-Customer Ordering Flow: A simple, guided process for customers to browse menu items, add them to a cart, and place an order.
+3. Customer Ordering Flow: A simple, guided process for customers to browse menu items, add them to a cart, and place an order.
 
-Owner Dashboard: A dedicated, secure dashboard for restaurant owners to add, edit, and remove menu items, as well as view incoming orders in real-time.
+4. Owner Dashboard: A dedicated, secure dashboard for restaurant owners to add, edit, and remove menu items, as well as view incoming orders in real-time.
 
-Category Management: Organize menu items into logical categories to improve navigation for customers.
+5. Category Management: Organize menu items into logical categories to improve navigation for customers.
 
-Lightweight & Efficient: Built with a minimal technology stack for fast performance and easy deployment.
+6. Lightweight & Efficient: Built with a minimal technology stack for fast performance and easy deployment.
 
 🚀 Getting Started
 Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
-Prerequisites
+## Prerequisites
 You need to have Python installed on your system. This project was developed using Python 3.9+. You'll also need pip for dependency management.
 
 ## Installation
