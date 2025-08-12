@@ -94,4 +94,4 @@ Binaya Sharma - binay.sharma1990@gmail.com
 
 # Note the URL below is only for test purposes. If any concern, reach out 
 
-Project Link: http://127.0.0.1:5000
+Project Link: https://tinyurl.com/Mobile-Menu-App
