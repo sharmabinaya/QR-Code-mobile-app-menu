@@ -2,12 +2,13 @@
 <img width="1185" height="686" alt="Screenshot 2025-08-11 at 20 22 17" src="https://github.com/user-attachments/assets/96649e8c-0141-4f1f-adee-2290e979aef7" />
 
 # QR-Code-mobile-app-menu
+
 MenuFlow is a modern, mobile-first web application designed to revolutionize the dining experience. It allows restaurants to create and manage digital menus accessible via QR codes, providing a seamless and touchless ordering process for customers.
 
 <img width="1173" height="674" alt="Screenshot 2025-08-11 at 20 20 53" src="https://github.com/user-attachments/assets/49ea5282-df8e-4736-b638-f6a6f58b70de" />
 
 
-MenuFlow: Digital QR Code Menu & Ordering System
+                                        MenuFlow: Digital QR Code Menu & Ordering System
 
 MenuFlow is a modern, mobile-first web application that allows small business owners (Cafe, Restaurant, any Local business with the fast growing technology to create and manage digital menus accessible via QR codes. It provides a seamless and contactless ordering experience for customers, replacing traditional physical menus.
 
